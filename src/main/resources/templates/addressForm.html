@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Saisir une adresse</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- (Optionnel) Styles personnalisés -->
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .card {
+            margin-top: 2rem;
+            border: none;
+            border-radius: 1rem;
+        }
+        .card-body {
+            border: 1px solid #e3e6f0;
+            border-radius: 1rem;
+        }
+        .card-title {
+            color: #4e73df;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        label {
+            font-weight: 600;
+            color: #4e73df;
+        }
+        .btn-custom {
+            background-color: #4e73df;
+            color: white;
+            border-radius: 0.5rem;
+        }
+        .btn-custom:hover {
+            background-color: #3d62c7; /* Slightly darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- (Optionnel) Inclusion d'une navbar via fragments, si vous en avez une -->
+<!-- <div th:replace="fragments/navbar :: navbar"></div> -->
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title text-center">Saisissez l'adresse</h1>
+
+            <!-- Formulaire de saisie d'adresse -->
+            <!-- Ajustez l'action et la méthode selon votre contrôleur qui traite la météo -->
+            <form action="/meteo" method="POST" class="mt-4">
+                <div class="form-group">
+                    <label for="address">Adresse :</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="address"
+                            name="address"
+                            placeholder="Entrez l'adresse ici"
+                            required
+                    />
+                </div>
+
+                <button type="submit" class="btn btn-custom mt-3 w-100">
+                    Obtenir la météo
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS + jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"
+></script>
+
+</body>
+</html>

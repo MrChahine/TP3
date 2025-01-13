@@ -1,14 +1,42 @@
 <!-- src/main/resources/templates/fragments/navbar.html -->
-<div  th:fragment="navbar">
-    <nav style="background-color: bisque " class="navbar navbar-expand-lg navbar-light">
-        <a style="color: darkblue" class="navbar-brand" href="#" >MyApp</a>
-        <div  class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Nom de l'application -->
+        <a class="navbar-brand" href="/greeting">TP-POO</a>
+
+        <!-- Bouton burger pour mobile -->
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenu de la navbar -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+                <!-- Lien vers page Greeting -->
                 <li class="nav-item">
-                    <a style="color: darkblue" class="nav-link" href="/greeting?name=ADNANE">Greeting</a>
+                    <a class="nav-link" href="/greeting">
+                        Greeting
+                    </a>
                 </li>
+                <!-- Lien vers la liste des Adresses -->
                 <li class="nav-item">
-                    <a style="color: darkred" class="nav-link" href="/addresses">Addresses</a>
+                    <a class="nav-link" href="/addresses">
+                        Addresses
+                    </a>
+                </li>
+                <!-- Lien supplémentaire vers le formulaire de saisie d'adresse -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/address">
+                        Saisir une adresse
+                    </a>
                 </li>
             </ul>
         </div>
