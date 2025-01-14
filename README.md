@@ -151,3 +151,8 @@ Exemple de réponse JSON simplifiée :
 11 : Orage
 
 21 : Neige légère
+
+## Projet GitHub
+
+Vous pouvez consulter le code source de ce projet sur [GitHub](https://github.com/MrChahine/TP3).
+
