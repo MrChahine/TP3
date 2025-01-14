@@ -27,6 +27,17 @@ Cette application permet de saisir une adresse et d'obtenir les prévisions mét
 
 ## Étapes et Questions-Réponses
 
+### Étape 13 : Questions sur le contrôleur
+
+### 1. Avec quelle partie du code avons-nous paramétré l'URL d'appel `/greeting` ?
+L'URL `/greeting` est paramétrée dans le contrôleur grâce à l'annotation `@GetMapping("/greeting")`. Cette annotation permet de mapper les requêtes HTTP GET faites sur `/greeting` au handler method correspondant dans le contrôleur.
+
+### 2. Avec quelle partie du code avons-nous choisi le fichier HTML à afficher ?
+Le fichier HTML à afficher est déterminé par le retour de la méthode du contrôleur. Par exemple, en retournant `"greeting"`, Spring Boot utilise le moteur de template **Thymeleaf** pour rechercher un fichier `greeting.html` dans le répertoire `src/main/resources/templates`.
+
+### 3. Comment envoyons-nous le nom à qui nous disons bonjour avec le second lien ?
+Nous envoyons le nom en utilisant des paramètres de requête (query parameters) dans l'URL. Le contrôleur récupère ces paramètres grâce à l'annotation @RequestParam.
+
 ### Étape 17
 
 **Question :** Avez-vous remarqué une différence après le redémarrage ?
