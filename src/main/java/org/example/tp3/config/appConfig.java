@@ -22,6 +22,6 @@ public class appConfig {
                 .setDefaultRequestConfig(requestConfig)
                 .build();
 
-        return new RestTemplate(new HttpComponentsClientHttpRequestFactory(httpClient));
+        return new RestTemplate(/*new HttpComponentsClientHttpRequestFactory(httpClient)*/);
     }
 }

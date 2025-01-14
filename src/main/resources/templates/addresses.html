@@ -1,16 +1,10 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Addresses</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <title>Liste des Adresses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    >
-
-    <!-- (Optional) Theme style or custom styles -->
     <style>
         body {
             background-color: #f8fafc;
@@ -44,22 +38,20 @@
 </head>
 <body>
 
-<!-- Reuse the navbar fragment -->
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <div class="container mt-5">
     <h1 class="text-center mb-4" style="color:#4e73df;">Liste des Adresses</h1>
 
-    <!-- Loop over addresses -->
     <div th:each="address : ${allAddresses}" class="card">
         <div class="card-body">
             <h5 class="card-title" th:text="${address.content}">Adresse</h5>
             <p class="card-text mb-2">
-                <strong>Auteur:</strong>
+                <strong>Auteur :</strong>
                 <span th:text="${address.author}" class="text-secondary"></span>
             </p>
             <p class="card-text">
-                <strong>Date:</strong>
+                <strong>Date :</strong>
                 <span
                         class="badge badge-date"
                         th:text="${#dates.format(address.creation, 'dd/MM/yyyy')}"
@@ -71,12 +63,8 @@
     </div>
 </div>
 
-<!-- Bootstrap JS and dependencies -->
-<script
-        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-></script>
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"
-></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

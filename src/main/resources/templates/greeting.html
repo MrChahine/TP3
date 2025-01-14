@@ -1,16 +1,14 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
 <head>
-    <title>Greeting</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <title>Accueil</title>
 
-    <!-- Bootstrap CSS -->
     <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     >
 
-    <!-- (Optional) Theme style or custom styles -->
     <style>
         body {
             background-color: #f8fafc;
@@ -41,21 +39,20 @@
 </head>
 <body>
 
-<!-- Reuse the navbar fragment -->
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <div class="container mt-5">
     <div class="jumbotron text-center">
         <h1 class="display-4">Bienvenue sur TP-POO!</h1>
         <p class="lead">
-            <span th:text="'Bonjour ' + ${nomTemplate} + ' !'"></span>
+            <span th:text="'Bonjour ' + ${nomTemplate} + ' !'">Bonjour !</span>
+        </p>
         <hr class="my-4">
         <p>Cliquez ci-dessous pour explorer d'autres fonctionnalités.</p>
         <a class="btn btn-custom btn-lg" href="/addresses" role="button">Voir les adresses</a>
     </div>
 </div>
 
-<!-- Bootstrap JS and dependencies -->
 <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 ></script>
